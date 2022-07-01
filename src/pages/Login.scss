@@ -1,32 +1,11 @@
-.login {
-  background: url(../../public/images/heropic2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: grid;
-  height: calc(100vh - 4rem);
-  grid-template-columns: [main-start]1fr [content-start]1fr [content-end]1fr [main-end];
-  grid-template-rows:
-    [main-start]minmax(auto, 1fr) [content-start]auto [content-end]minmax(
-      auto,
-      1fr
-    )
-    [main-end];
-  &:after {
-    content: "";
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    height: calc(100vh - 4rem);
-    width: 100%;
-    background: rgba(0, 0, 0, 0.7);
-  }
-  form {
+.form-wrap {
+  .form-1 {
     z-index: 20;
     grid-area: content;
     border: 2px solid rgba(255, 165, 0.5);
     border-radius: 15px;
     padding: 4rem;
+    margin-top: 3rem;
     font-weight: 500;
     text-align: center;
     // box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);

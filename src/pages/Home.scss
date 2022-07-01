@@ -1,25 +1,53 @@
 main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: [main-start]1fr [content-start]1fr [content-end]1fr [main-end];
+  grid-template-rows:
+    [main-start]minmax(auto, 1fr) [content-start]auto [content-end]minmax(
+      auto,
+      1fr
+    )
+    [main-end];
+  // justify-content: space-between;
+  // align-items: center;
   padding: 6% 5%;
+  background: url("../../public/images/heropic2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+
+  &:after {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
   section {
-    width: 45%;
+    grid-area: content;
+    z-index: 10;
+    // width: 45%;
+    color: white;
     &.text-section {
       text-align: center;
-      padding: 1.5rem;
+      width: auto;
+      // padding: 1.5rem;
       h1 {
         font-size: 5rem;
         span {
           display: block;
           font-size: 4.5rem;
-          color: darkcyan;
+          // color: darkcyan;
           font-style: italic;
         }
       }
       p {
         font-size: 2rem;
         margin-block: 1rem;
+        width: max-content;
       }
       .btn {
         padding: 1rem;
@@ -35,25 +63,25 @@ main {
         }
       }
     }
-    &.img-section {
-      position: relative;
-      .hero_pic1 {
-        width: 100%;
-        max-width: 35rem;
-        height: auto;
-        max-height: 40rem;
-        border-radius: 10px;
-        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
-      }
-      .heropic2 {
-        position: absolute;
-        left: -7rem;
-        bottom: -4rem;
-        border-radius: 15px;
-        z-index: -1;
-        max-width: 100%;
-        height: auto;
-      }
-    }
+    // &.img-section {
+    //   position: relative;
+    //   .hero_pic1 {
+    //     width: 100%;
+    //     max-width: 35rem;
+    //     height: auto;
+    //     max-height: 40rem;
+    //     border-radius: 10px;
+    //     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+    //   }
+    //   .heropic2 {
+    //     position: absolute;
+    //     left: -7rem;
+    //     bottom: -4rem;
+    //     border-radius: 15px;
+    //     z-index: -1;
+    //     max-width: 100%;
+    //     height: auto;
+    //   }
+    // }
   }
 }

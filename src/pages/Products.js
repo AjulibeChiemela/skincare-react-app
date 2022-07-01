@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import NavCol from "../components/NavCol";
 import { products } from "../data/data";
 import "./Products.scss";
 const Products = () => {
   return (
     <div>
+      <NavCol />
       <div className="products">
         {products.map((product) => {
           return (

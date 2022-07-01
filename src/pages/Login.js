@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Forms from "../components/Forms";
 import "./Login.scss";
 const Login = () => {
   return (
-    <div className="login">
-      <form method="post">
+    <Forms>
+      <form method="post" className="form-1">
         <p>LOGIN</p>
         <input
           type="text"
@@ -35,7 +36,7 @@ const Login = () => {
           Are you a new user?<Link to="/SignUp">SignUp</Link>
         </p>
       </form>
-    </div>
+    </Forms>
   );
 };
 

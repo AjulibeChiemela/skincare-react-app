@@ -1,9 +1,13 @@
 import React from "react";
+import NavCol from "../components/NavCol";
 
 const Contact = () => {
   return (
     <div>
-      <h1>This is the contact page</h1>
+      <NavCol />
+      <div>
+        <h1>This is the contact page</h1>
+      </div>
     </div>
   );
 };

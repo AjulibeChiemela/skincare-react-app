@@ -1,10 +1,12 @@
 import React from "react";
+import NavCol from "../components/NavCol";
 import { services } from "../data/data";
 import "./Services.scss";
 
 const Services = () => {
   return (
     <div>
+      <NavCol />
       <div className="services">
         {services.map((service) => {
           return (
