@@ -10,12 +10,18 @@ const SingleProduct = () => {
   return (
     <div>
       <NavCol />
-      <div>
+      <div className="SProduct-wrap">
         <h1>{product.name}</h1>
         <img src={product.img_url} alt={product.name} />
-        <p>PRODUCT DESCRIPTION: {product.description}</p>
-        <h3>CATEGORY: {product.category}</h3>
-        <h3>PRICE: ${product.price}</h3>
+        <p>
+          <span>PRODUCT DESCRIPTION:</span> {product.description}
+        </p>
+        <p>
+          <span>CATEGORY:</span> {product.category}
+        </p>
+        <p>
+          <span>PRICE: $</span> {product.price}
+        </p>
         <div>
           <button>Add to cart</button>
           <button>Buy Now</button>

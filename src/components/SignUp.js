@@ -30,11 +30,11 @@ const SignUp = () => {
           <br />
           <input type="number" id="phoneNumber" name="phoneNumber" />
         </div>
-        {/* <div>
+        <div>
           <label for="city">City</label>
           <br />
           <input type="text" id="city" name="city" />
-        </div> */}
+        </div>
         <div className="choose-gender">
           <p>Gender: </p>
           <label for="male">Male</label>
@@ -58,7 +58,7 @@ const SignUp = () => {
           <input type="password" id="password2" name="password2" />
         </div>
         <button type="submit">SignUp</button>
-        <p>
+        <p className="quest">
           Already have an account?<Link to="/Login">Login</Link>
         </p>
       </form>
